@@ -1,0 +1,6 @@
+<LookAndFeels skinBuilder="lafs/SkinBuilderLAF.swf">
+	<LookAndFeel name="Default" clazz="org.aswing.plaf.basic.BasicLookAndFeel">
+	</LookAndFeel>
+	<LookAndFeel name="Orange LAF" path="lafs/OrangeLAF.swf" clazz="org.aswing.skinbuilder.orange.OrangeLookAndFeel">
+	</LookAndFeel>
+</LookAndFeels>

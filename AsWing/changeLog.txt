@@ -1,0 +1,181 @@
+___________________AsWing A3 1.1________________
+
+fixed focusRect bug of AIR
+fixed contextMenu bug of JPopup(not shown bug)
+fixed JFrame background image bug of SkinBuilderLAF(two top corners out bounds)
+fixed JViewport view location bug when resized
+fixed color chooser model bug when no color selected more than once
+fixed color JColorSwatcher bug when dispose it
+fixed JPopup memory leak bug
+fixed JWindow active transfer bug
+fixed JLoadPane set asset before old asset loaded bug.
+add JMenu mouseOver state image for SkinBuilderLAF
+make JComboBox drop down list item render mouseOver state
+added setCursor method to CursorManager
+added setAlwaysUseTimer method to make AsWing Components can works with Flex components
+added margin param to FlowLayout
+added setActivable method to JWindow to make it can judge whether or not become active when show or user interactive. 
+added revalidate call to JPopup.pack() to make sure the call will always make effect if preferred size has changed.
+added dragAcceptableInitiatorAppraiser property to Component to make complex drop trigger appraise
+
+___________________AsWing A3 1.2________________
+additions:
+
+added rowHeight ui default for JTree
+added defaultMaxChars class properties for JTextField and JTextArea
+added FlowWrapLayout
+added a ui defaults property ScrollBar.barWidth to make JScrollBar size configurable.
+added some help method for GuiBuilder.
+added org.aswing.ext.Folder
+added updateAllComponentUIInMemory function to AsWingUtils
+added getSelectionRow method to JTree
+added indeterminateDelay property to JProgressBar
+
+bugfixes:
+
+fixed JTextComponent setForeground bug
+fixed JTextComponent setFont null-ponter bug
+fixed JColorSwatcher black color bug
+fixed KeyboardManager bug for uppercase char input
+fixed isProgrammic bug for List selection events.
+fixed fixed splite pane null and divider removed by removeAll bug
+fixed fonts of JLabel, Buttons, Menus lost update when changed UI
+fixed jframe setClose setResiable buttons not updated bug
+fixed jframe will out of stage if iconified at left most
+fixed important bug-memory leak of JFrame and ResizerController
+fixed combobox Act event always fired twice a time bug
+fixed JList setSelectedInterval(-1) to clear selection bug
+
+
+___________________AsWing A3 1.3________________
+additions:
+
+added CaveBorder
+added wrapSimpleButton method to button classes
+added appendAll and getSelectedButton method to ButtonGroup
+added setSelectable/isSelectable method to JLabel
+added EmptyIcon class
+added some useful methods to ButtonGroup
+added default cells render value+"" instead of value.toString, solved value null issue
+added JClosableTabbedPane
+added PropertyTableModel
+added ensureRectVisible method to JViewport
+added setTextFilters function to JLabel and buttons
+added invalidatePreferSizeCaches function to Component
+----------AIR multi-stage(use multi NativeWindow) support-------------
+Added WeakMap, WeakReference tool to avoid memory leak
+CursorManager, FocusManager from static/sington to normal instance obj per stage.
+KeyboardManager from sington to normal instance per JRootPane.
+
+
+bugfixes:
+
+fixed The button text is under icon then can't see bug
+fixed TabbedPaneUIs bugs
+fixed TabbedPane Tab and Accordion Header text font and color can't change bug.
+fixed JTextComponent some times with less width when column is set 0
+
+---------migrate from 1.2 to 1.3:----------
+
+AsWing Core:
+
+Change CursorManager static method call to CursorManager.getManager().methodCall
+Change FocusManager.getDefaultManager to FocusManager.getManager(stage)
+For KeyboardManager, now you need to create your KeyboardManager instance or get instances from JRootPane.getKeyboardManager()
+
+LookAndFeels based on SkinBuilderLAF:
+
+change 
+			"Frame.titleBarLayout", SkinFrameTitleBarLayout, 
+to
+
+
+			"Frame.titleBarBG", SkinFrameTitleBarBG, 
+			"Frame.titleBarButtonGap", 2, 
+
+_____________________________________________________
+
+
+___________________AsWing 1.3.2________________
+Simply call AsWing means just AsWing AS3 version, AS2 version should call with AS2 or A2 keywords.
+additions:
+
+added ASFontAdvProperties to support embedFonts, antiAlias, gridType etc properties.
+
+bugfixes:
+
+fixed JAdjuster Action event not fired when lost focus with changes
+fixed JTree edit stopped event fired too early bug
+fixed TableCellEditEvent and TreeCellEditEvent methods return type bug
+fixed JPopup default owner bug
+
+
+
+___________________________AsWing A3 1.4_________________________
+additions:
+
+1. Added ability to only set preferred width or height, another will be auto count by layout or UI.
+If you call setPreferredWith() to set a number(!=-1) the width will be locked.
+setPreferredWidth(-1) to make it return to be auto counted.
+Same to maximim and miminum sizes.
+
+2. Make JTextArea avoid scroll change when make focus
+3. Improved JPopupMenu popup location
+
+4. Added DefaultsDecorator to make ComponentUI default change behavor correcter
+now
+//-------
+var ui:ComponentUI = aCom.getUI();
+ui.putDefault(xxx, xxx);
+ui.putDefault(xxx, xxx);
+...
+aCom.setUI(ui);
+//-------
+Will runs more better about some skin assets defaults properties changing there.
+
+5. Added MultipleAssetIcon by Srdjan
+6. Added GridList
+
+bugfixes:
+
+fixed drag jframe buggy issue after changed LAF
+fixed AWSprite bringToTop/Bottom bug when useBitmapCache
+fixed a JList key navigation bug
+fixed a preferred size cache bug that a non-valid component invalidate will not get cache fresh
+
+___________________________AsWing A3 1.5_________________________
+
+fixed DefaultComboBoxEditor a action event fire bug when list selection changed.
+fixed CellPane invalidateTree bug(it make JList/JTree/JTable continually validating can't stop)
+fixed JTabbedPane and JClosableTabbedPane tab scroll bug
+fixed a mask bounds bug of component when small than min size
+fixed a JPopupMenu bug when shown size is same to last show but children is not same
+made JLoadPane loaded asset always at bottom depth
+added function translator and editable support to PropertyTableModel
+added setMnemonicEnabled/isMnemonicEnabled methods to AbstractButton
+improved resizer, more accurate in directly mode
+renamed org.aswing.util.Vector to org.aswing.util.ArrayList
+some other minor fixes/improvements
+
+___________________________AsWing 2.0 beta_________________________
+
+New default LookAndFeel
+Added style tune feature
+Added mideground color feature
+
+Added JStepper -- a Numeric Stepper component
+Improved JAdjuster, state change event will fired when input changes
+Fixed JComboBox selection change event bug
+Improved JTable(
+	will not limit its maximize size, 
+	added footer feature, it now can has a footer in its view, 
+	improved show/hide grid methods, easier use than before)
+
+Added DateChooser
+Added WeightBoxLayout
+
+__________________________AsWing 2.0_________________________________
+
+added setDrawTransparentTrigger()
+make all borders has own displayobject, this will make sure all border rendered on top of background decorater
+improved ASFont, support all TextFormat properties by pass a TextFormat instance to the constructor

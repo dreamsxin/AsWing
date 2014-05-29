@@ -1,4 +1,5 @@
 # Build and Release Folders
+.svn
 bin/
 bin-debug/
 bin-release/

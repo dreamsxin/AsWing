@@ -1,0 +1,814 @@
+<Definition>
+
+<Types>
+
+	<Type name="Boolean" editor="org.aswing.guibuilder.property.BooleanEditor"
+		serializer="org.aswing.guibuilder.property.BooleanSerializer">
+	</Type>
+
+	<Type name="int" editor="org.aswing.guibuilder.property.IntEditor"
+		serializer="org.aswing.guibuilder.property.IntSerializer">
+	</Type>
+
+	<Type name="Number" editor="org.aswing.guibuilder.property.NumberEditor"
+		serializer="org.aswing.guibuilder.property.NumberSerializer">
+	</Type>
+
+	<Type name="String" editor="org.aswing.guibuilder.property.StringEditor"
+		serializer="org.aswing.guibuilder.property.StringSerializer">
+	</Type>
+
+	<Type name="IntDimension" editor="org.aswing.guibuilder.property.IntDimensionEditor"
+		serializer="org.aswing.guibuilder.property.IntDimensionSerializer">
+	</Type>
+
+	<Type name="Size" editor="org.aswing.guibuilder.property.SizeEditor"
+		serializer="org.aswing.guibuilder.property.IntDimensionSerializer">
+	</Type>
+
+	<Type name="IntPoint" editor="org.aswing.guibuilder.property.IntPointEditor"
+		serializer="org.aswing.guibuilder.property.IntPointSerializer">
+	</Type>
+
+	<Type name="Location" editor="org.aswing.guibuilder.property.LocationEditor"
+		serializer="org.aswing.guibuilder.property.IntPointSerializer">
+	</Type>
+
+	<Type name="PreferSize" editor="org.aswing.guibuilder.property.PreferSizeEditor"
+		serializer="org.aswing.guibuilder.property.IntDimensionSerializer">
+	</Type>
+
+	<Type name="Align" editor="org.aswing.guibuilder.property.AlignEditor"
+		serializer="org.aswing.guibuilder.property.AlignSerializer">
+	</Type>
+
+	<Type name="Axis" editor="org.aswing.guibuilder.property.AxisEditor"
+		serializer="org.aswing.guibuilder.property.AxisSerializer">
+	</Type>
+
+	<Type name="Orientation" editor="org.aswing.guibuilder.property.OrientationEditor"
+		serializer="org.aswing.guibuilder.property.OrientationSerializer">
+	</Type>
+
+	<Type name="Layout" editor="org.aswing.guibuilder.property.LayoutEditor"
+		serializer="org.aswing.guibuilder.property.LayoutSerializer">
+	</Type>
+
+	<Type name="Border" editor="org.aswing.guibuilder.property.BorderEditor"
+		serializer="org.aswing.guibuilder.property.BorderSerializer">
+	</Type>
+
+	<Type name="Constraints" editor="org.aswing.guibuilder.property.ConstraintsEditor"
+		serializer="org.aswing.guibuilder.property.StringSerializer">
+	</Type>
+
+	<Type name="Color" editor="org.aswing.guibuilder.property.ColorEditor"
+		serializer="org.aswing.guibuilder.property.ColorSerializer">
+	</Type>
+
+	<Type name="Font" editor="org.aswing.guibuilder.property.FontEditor"
+		serializer="org.aswing.guibuilder.property.FontSerializer">
+	</Type>
+
+	<Type name="IntEmu" editor="org.aswing.guibuilder.property.IntEmuEditor"
+		serializer="org.aswing.guibuilder.property.IntSerializer">
+	</Type>
+
+	<Type name="Scope" editor="org.aswing.guibuilder.property.ScopeEditor"
+		serializer="org.aswing.guibuilder.property.ScopeSerializer">
+	</Type>
+
+	<Type name="Array" editor="org.aswing.guibuilder.property.ArrayEditor"
+		serializer="org.aswing.guibuilder.property.ArraySerializer">
+	</Type>
+
+	<Type name="Pack" editor="org.aswing.guibuilder.property.PackEditor"
+		serializer="org.aswing.guibuilder.property.EmptySerializer">
+	</Type>
+
+</Types>
+
+<Borders>
+	<Border name="EmptyBorder" clazz="org.aswing.border.EmptyBorder">
+		<Property label="Interior" name="Interior" type="Border">
+		</Property>
+		<Property label="Top" name="Top" type="int">
+		</Property>
+		<Property label="Left" name="Left" type="int">
+		</Property>
+		<Property label="Bottom" name="Bottom" type="int">
+		</Property>
+		<Property label="Right" name="Right" type="int">
+		</Property>
+	</Border>
+	<Border name="LineBorder" clazz="org.aswing.border.LineBorder">
+		<Property label="Interior" name="Interior" type="Border">
+		</Property>
+		<Property label="Color" name="Color" type="Color" editorParam="nonull">
+			<Value value="0,1"/>
+		</Property>
+		<Property label="Thickness" name="Thickness" type="int">
+		</Property>
+		<Property label="Round" name="Round" type="int">
+		</Property>
+	</Border>
+	<Border name="BevelBorder" clazz="org.aswing.border.BevelBorder">
+		<Property label="Interior" name="Interior" type="Border">
+		</Property>
+		<Property label="Type" name="BevelType" type="IntEmu" editorParam="Raised,Lowered">
+			<Value value="1"></Value>
+		</Property>
+		<Property label="Thickness" name="Thickness" type="int">
+		</Property>
+	</Border>
+	<Border name="SideLineBorder" clazz="org.aswing.border.SideLineBorder">
+		<Property label="Interior" name="Interior" type="Border">
+		</Property>
+		<Property label="Color" name="Color" type="Color" editorParam="nonull">
+			<Value value="0,1"/>
+		</Property>
+		<Property label="Thickness" name="Thickness" type="int">
+		</Property>
+		<Property label="Side" name="Side" type="IntEmu" editorParam="North,South,East,West">
+			<Value value="0"></Value>
+		</Property>
+	</Border>
+	<Border name="TitledBorder" clazz="org.aswing.border.TitledBorder">
+		<Property label="Interior" name="Interior" type="Border">
+		</Property>
+		<Property label="Color" name="Color" type="Color" editorParam="nonull">
+			<Value value="0,1"/>
+		</Property>
+		<Property label="Title" name="Title" type="String">
+			<Value value="title"/>
+		</Property>
+		<Property label="Position" name="Position" type="IntEmu" editorParam=",Top,,Bottom">
+			<Value value="1"></Value>
+		</Property>
+		<Property label="Align" name="Align" type="Align" editorParam="hor-only">
+		</Property>
+		<Property label="Beveled" name="Beveled" type="Boolean">
+			<Value value="true"></Value>
+		</Property>
+		<Property label="Edge" name="Edge" type="int">
+		</Property>
+		<Property label="Round" name="Round" type="int">
+		</Property>
+		<Property label="LineColor" name="LineColor" type="Color">
+		</Property>
+		<Property label="LineLightColor" name="LineLightColor" type="Color">
+		</Property>
+	</Border>
+	<Border name="SimpleTitledBorder" clazz="org.aswing.border.SimpleTitledBorder">
+		<Property label="Interior" name="Interior" type="Border">
+		</Property>
+		<Property label="Title" name="Title" type="String">
+			<Value value="title"/>
+		</Property>
+		<Property label="Color" name="Color" type="Color" editorParam="nonull">
+			<Value value="0,1"/>
+		</Property>
+		<Property label="Position" name="Position" type="IntEmu" editorParam=",Top,,Bottom">
+			<Value value="1"></Value>
+		</Property>
+		<Property label="Offset" name="Offset" type="int">
+			<Value value="0"></Value>
+		</Property>
+		<Property label="Align" name="Align" type="Align" editorParam="hor-only">
+		</Property>
+	</Border>
+	<Border name="CaveBorder" clazz="org.aswing.border.CaveBorder">
+		<Property label="Interior" name="Interior" type="Border">
+		</Property>
+		<Property label="Beveled" name="Beveled" type="Boolean">
+			<Value value="true"></Value>
+		</Property>
+		<Property label="LineColor" name="LineColor" type="Color">
+		</Property>
+		<Property label="LineLightColor" name="LineLightColor" type="Color">
+		</Property>
+		<Property label="Round" name="Round" type="int">
+		</Property>
+	</Border>
+</Borders>
+
+<Layouts>
+	<Layout name="EmptyLayout" clazz="org.aswing.EmptyLayout">
+	</Layout>
+	<Layout name="CenterLayout" clazz="org.aswing.CenterLayout">
+	</Layout>
+	<Layout name="FlowLayout" clazz="org.aswing.FlowLayout">
+		<Property label="align" name="Alignment" type="Align" editorParam="hor-only">
+		</Property>
+		<Property label="hgap" name="Hgap" type="int">
+		</Property>
+		<Property label="vgap" name="Vgap" type="int">
+		</Property>
+		<Property label="margin" name="Margin" type="Boolean">
+		</Property>
+	</Layout>
+	<Layout name="FlowWrapLayout" clazz="org.aswing.FlowWrapLayout">
+		<Property label="prefer width" name="PreferWidth" type="int">
+			<Value value="200"></Value>
+		</Property>
+		<Property label="align" name="Alignment" type="Align" editorParam="hor-only">
+		</Property>
+		<Property label="hgap" name="Hgap" type="int">
+		</Property>
+		<Property label="vgap" name="Vgap" type="int">
+		</Property>
+		<Property label="margin" name="Margin" type="Boolean">
+		</Property>
+	</Layout>
+	<Layout name="BorderLayout" clazz="org.aswing.BorderLayout">
+		<Property label="hgap" name="Hgap" type="int">
+		</Property>
+		<Property label="vgap" name="Vgap" type="int">
+		</Property>
+	</Layout>
+	<Layout name="SoftBoxLayout" clazz="org.aswing.SoftBoxLayout">
+		<Property label="axis" name="Axis" type="Axis">
+		</Property>
+		<Property label="align" name="Align" type="Align">
+		</Property>
+		<Property label="gap" name="Gap" type="int">
+		</Property>
+	</Layout>
+	<Layout name="BoxLayout" clazz="org.aswing.BoxLayout">
+		<Property label="axis" name="Axis" type="Axis">
+		</Property>
+		<Property label="gap" name="Gap" type="int">
+		</Property>
+	</Layout>
+	<Layout name="GridLayout" clazz="org.aswing.GridLayout">
+		<Property label="rows" name="Rows" type="int">
+			<Value value="1"></Value>
+		</Property>
+		<Property label="columns" name="Columns" type="int">
+			<Value value="0"></Value>
+		</Property>
+		<Property label="hgap" name="Hgap" type="int">
+		</Property>
+		<Property label="vgap" name="Vgap" type="int">
+		</Property>
+	</Layout>
+	
+</Layouts>
+
+<Components>
+	<BaseComponent name="Component" clazz="org.aswing.Component">
+		<Property label="ID" name="id" type="String" editorParam="no-generate-code" category="Common" order="0">
+		</Property>
+		<Property label="Attr scope" name="attr_scope" type="Scope" category="Common" order="10">
+			<Value value="private"></Value>
+		</Property>
+		<Property label="Getter scope" name="getter_scope" type="Scope" editorParam="none-enabled" category="Common" order="10">
+			<Value value="public"></Value>
+		</Property>
+		<Property label="Name" name="Name" type="String" action="reAppendToParent" category="Common" order="10">
+		</Property>
+		<Property label="Opaque" name="Opaque" type="Boolean" action="repaint" category="Common" order="10">
+		</Property>
+		<Property label="Font" name="Font" type="Font" action="repaintAndRevalidate" category="Common" order="10">
+		</Property>
+		<Property label="Foreground" name="Foreground" type="Color" action="repaint" category="Common" order="10">
+		</Property>
+		<Property label="Background" name="Background" type="Color" action="repaint" category="Common" order="10">
+		</Property>
+		<Property label="Enabled" name="Enabled" type="Boolean" action="repaint" category="Common" order="10">
+		</Property>
+		<Property label="Location" name="Location" type="Location" action="revalidate" category="Layout" order="10">
+		</Property>
+		<Property label="Size" name="Size" type="Size" action="revalidate" category="Layout" order="10">
+		</Property>
+		<Property label="PreferSize" name="PreferredSize" type="PreferSize" action="revalidate" category="Layout" order="10">
+		</Property>
+		<Property label="Constraints" name="Constraints" type="Constraints" action="parentReAppendChildren" category="Layout" order="10">
+		</Property>
+		<Property label="Tooltip" name="ToolTipText" type="String" category="Common" order="10">
+		</Property>
+		<Property label="Border" name="Border" type="Border" action="repaintAndRevalidate" category="Common" order="10">
+		</Property>
+	</BaseComponent>
+	
+	<BaseContainer name="Container" clazz="org.aswing.Container" sup="Component">
+		<Property label="Layout" name="Layout" type="Layout" action="reAppendChildren" category="Layout" order="-10">
+		</Property>
+	</BaseContainer>
+
+	<Com name="JPanel" clazz="org.aswing.JPanel" sup="Container">
+		<Property label="Getter scope" name="getter_scope" type="Scope" editorParam="none-enabled" category="Common" order="10">
+			<Value value="none"></Value>
+		</Property>
+		<Property label="Size" name="Size" type="Size" action="revalidate" category="Layout" order="10">
+			<Value value="400,400" ></Value>
+		</Property>
+	</Com>
+
+	<Com name="Form" clazz="org.aswing.ext.Form" sup="JPanel">
+		<Property label="hgap" name="HGap" type="int" category="Feature" order="10">
+		</Property>
+		<Property label="vgap" name="VGap" type="int" category="Feature" order="10">
+		</Property>
+		<Property label="Layout" name="Layout" type="Layout" action="reAppendChildren" editorParam="disabled" category="Layout" order="-10">
+		</Property>
+	</Com>
+
+	<Com name="FormRow" clazz="org.aswing.ext.FormRow" sup="Container">
+		<Property label="Getter scope" name="getter_scope" type="Scope" editorParam="none-enabled" category="Common" order="10">
+			<Value value="none"></Value>
+		</Property>
+		<Property label="Column indecis" name="ColumnChildrenIndecis" type="String" tooltip="For example: \n'-1,0,0,1' means [ ---------- ][ --child0 sit two column-- ][ --child1-- ]" category="Feature" order="10">
+			<Value value="-1,0,1,2" ></Value>
+		</Property>
+	</Com>
+	
+	<Com name="JButton" clazz="org.aswing.JButton" sup="Component">
+		<Property label="Label" name="Text" type="String" action="revalidate" category="Feature" order="0">
+			<Value value="label" ></Value>
+		</Property>
+		<Property label="Hor alig" name="HorizontalAlignment" type="Align" action="revalidate" editorParam="hor-only" category="Feature" order="10">
+		</Property>
+		<Property label="Ver alig" name="VerticalAlignment" type="Align" action="revalidate" editorParam="ver-only" category="Feature" order="10">
+		</Property>
+		<Property label="Hor text pos" name="HorizontalTextPosition" type="Align" action="revalidate" editorParam="hor-only" category="Feature" order="10">
+		</Property>
+		<Property label="Ver text pos" name="VerticalTextPosition" type="Align" action="revalidate" editorParam="ver-only" category="Feature" order="10">
+		</Property>
+		<Property label="Icon text gap" name="IconTextGap" type="int" action="revalidate" category="Feature" order="10">
+		</Property>
+	</Com>
+
+	<Com name="JLabel" clazz="org.aswing.JLabel" sup="Component">
+		<Property label="Getter scope" name="getter_scope" type="Scope" editorParam="none-enabled" category="Common" order="10">
+			<Value value="none"></Value>
+		</Property>
+		<Property label="Label" name="Text" type="String" category="Feature" order="0">
+			<Value value="label"></Value>
+		</Property>
+		<Property label="Selectable" name="Selectable" type="Boolean" action="repaint" category="Feature" order="1">
+		</Property>
+		<Property label="Hor alig" name="HorizontalAlignment" type="Align" action="revalidate" editorParam="hor-only" category="Feature" order="10">
+		</Property>
+		<Property label="Ver alig" name="VerticalAlignment" type="Align" action="revalidate" editorParam="ver-only" category="Feature" order="10">
+		</Property>
+		<Property label="Hor text pos" name="HorizontalTextPosition" type="Align" action="revalidate" editorParam="hor-only" category="Feature" order="10">
+		</Property>
+		<Property label="Ver text pos" name="VerticalTextPosition" type="Align" action="revalidate" editorParam="ver-only" category="Feature" order="10">
+		</Property>
+		<Property label="Icon text gap" name="IconTextGap" type="int" action="revalidate" category="Feature" order="10">
+		</Property>
+	</Com>
+
+	<Com name="JLabelButton" clazz="org.aswing.JLabelButton" sup="JButton">
+	</Com>
+
+	<Com name="JToggleButton" clazz="org.aswing.JToggleButton" sup="JButton">
+		<Property label="Selected" name="Selected" type="Boolean" action="repaint" category="Feature" order="1">
+		</Property>
+	</Com>
+	<Com name="JCheckBox" clazz="org.aswing.JCheckBox" sup="JToggleButton">
+	</Com>
+	<Com name="JRadioButton" clazz="org.aswing.JRadioButton" sup="JToggleButton">
+	</Com>
+
+	<Com name="JComboBox" clazz="org.aswing.JComboBox" sup="Component">
+		<Property label="Editable" name="Editable" type="Boolean" action="repaint" category="Feature" order="0">
+		</Property>
+		<Property label="MaximumRowCount" name="MaximumRowCount" type="int" category="Feature" order="1">
+			<Value value="7"></Value>
+		</Property>
+	</Com>
+
+	<Com name="JTextField" clazz="org.aswing.JTextField" sup="Component">
+		<Property label="Columns" name="Columns" type="int" action="revalidate" category="Feature" order="10">
+		</Property>
+		<Property label="Text" name="Text" type="String" category="Feature" order="10">
+		</Property>
+		<Property label="Html text" name="HtmlText" type="String" category="Feature" order="10">
+		</Property>
+		<Property label="Editable" name="Editable" type="Boolean" action="repaint" category="Feature" order="10">
+		</Property>
+		<Property label="Password" name="DisplayAsPassword" type="Boolean" category="Feature" order="10">
+		</Property>
+		<Property label="MaxChars" name="MaxChars" type="int" category="Feature" order="10">
+		</Property>
+		<Property label="Restrict" name="Restrict" type="String" category="Feature" order="10">
+		</Property>
+		<Property label="Wrap" name="WordWrap" type="Boolean" category="Feature" order="10">
+		</Property>
+	</Com>
+
+	<Com name="JTextArea" clazz="org.aswing.JTextArea" sup="Component">
+		<Property label="Rows" name="Rows" type="int" action="revalidate" category="Feature" order="10">
+		</Property>
+		<Property label="Columns" name="Columns" type="int" action="revalidate" category="Feature" order="10">
+		</Property>
+		<Property label="Text" name="Text" type="String" category="Feature" order="10">
+		</Property>
+		<Property label="Html text" name="HtmlText" type="String" category="Feature" order="10">
+		</Property>
+		<Property label="Editable" name="Editable" type="Boolean" action="repaint" category="Feature" order="10">
+		</Property>
+		<Property label="Password" name="DisplayAsPassword" type="Boolean" category="Feature" order="10">
+		</Property>
+		<Property label="MaxChars" name="MaxChars" type="int" category="Feature" order="10">
+		</Property>
+		<Property label="Restrict" name="Restrict" type="String" category="Feature" order="10">
+		</Property>
+		<Property label="Wrap" name="WordWrap" type="Boolean" category="Feature" order="10">
+		</Property>
+	</Com>
+
+	<Com name="MultilineLabel" clazz="org.aswing.ext.MultilineLabel" sup="JTextArea">
+	</Com>
+	
+	<Com name="JAdjuster" clazz="org.aswing.JAdjuster" sup="Component">
+		<Property label="Orientation" name="Orientation" type="Orientation" category="Feature" order="10">
+		</Property>
+		<Property label="columns" name="Columns" type="int" action="revalidate" category="Feature" order="10">
+			<Value value="3"></Value>
+		</Property>
+	</Com>
+
+	<Com name="JStepper" clazz="org.aswing.JStepper" sup="Component">
+		<Property label="Orientation" name="Orientation" type="Orientation" category="Feature" order="10">
+		</Property>
+		<Property label="columns" name="Columns" type="int" action="revalidate" category="Feature" order="10">
+			<Value value="3"></Value>
+		</Property>
+	</Com>
+	
+	<Com name="JScrollBar" clazz="org.aswing.JScrollBar" sup="Component">
+		<Property label="Orientation" name="Orientation" type="Orientation" category="Feature" order="10">
+		</Property>
+		<Property label="Value" name="Value" type="int" category="Feature" order="10">
+			<Value value="0"></Value>
+		</Property>
+		<Property label="Extent" name="VisibleAmount" type="int" category="Feature" order="10">
+			<Value value="10"></Value>
+		</Property>
+		<Property label="Minimum" name="Minimum" type="int" category="Feature" order="10">
+			<Value value="0"></Value>
+		</Property>
+		<Property label="Maximum" name="Maximum" type="int" category="Feature" order="10">
+			<Value value="100"></Value>
+		</Property>
+	</Com>
+
+	<Com name="JSlider" clazz="org.aswing.JSlider" sup="Component">
+		<Property label="Orientation" name="Orientation" type="Orientation" category="Feature" order="10">
+		</Property>
+		<Property label="Value" name="Value" type="int" category="Feature" order="10">
+			<Value value="0"></Value>
+		</Property>
+		<Property label="Extent" name="Extent" type="int" category="Feature" order="10">
+			<Value value="0"></Value>
+		</Property>
+		<Property label="Minimum" name="Minimum" type="int" category="Feature" order="10">
+			<Value value="0"></Value>
+		</Property>
+		<Property label="Maximum" name="Maximum" type="int" category="Feature" order="10">
+			<Value value="100"></Value>
+		</Property>
+		<Property label="Major tick spacing" name="MajorTickSpacing" type="int" category="Feature" order="10">
+		</Property>
+		<Property label="Minor tick spacing" name="MinorTickSpacing" type="int" category="Feature" order="10">
+		</Property>
+		<Property label="Inverted" name="Inverted" type="Boolean" category="Feature" order="10">
+		</Property>
+		<Property label="Paint ticks" name="PaintTicks" type="Boolean" category="Feature" order="10">
+		</Property>
+		<Property label="Snap to ticks" name="SnapToTicks" type="Boolean" category="Feature" order="10">
+		</Property>
+		<Property label="Show value tip" name="ShowValueTip" type="Boolean" category="Feature" order="10">
+		</Property>
+	</Com>
+
+	<Com name="JScrollPane" clazz="org.aswing.JScrollPane" sup="Container">
+		<Property label="Getter scope" name="getter_scope" type="Scope" editorParam="none-enabled" category="Common" order="-10">
+			<Value value="none"></Value>
+		</Property>
+		<Property label="Layout" name="Layout" type="Layout" action="reAppendChildren" editorParam="disabled" category="Layout" order="-10">
+		</Property>
+	</Com>
+	<Com name="JViewport" clazz="org.aswing.JViewport" sup="Container">
+		<Property label="Getter scope" name="getter_scope" type="Scope" editorParam="none-enabled" category="Common" order="10">
+			<Value value="none"></Value>
+		</Property>
+		<Property label="Hor alig" name="HorizontalAlignment" type="Align" action="revalidate" editorParam="hor-only" category="Feature" order="10">
+		</Property>
+		<Property label="Ver alig" name="VerticalAlignment" type="Align" action="revalidate" editorParam="ver-only" category="Feature" order="10">
+		</Property>
+		<Property label="Tracks width" name="TracksWidth" type="Boolean" category="Feature" order="10">
+		</Property>
+		<Property label="Tracks height" name="TracksHeight" type="Boolean" category="Feature" order="10">
+		</Property>
+		<Property label="Hor unit increment" name="HorizontalUnitIncrement" type="int" category="Feature" order="10">
+		</Property>
+		<Property label="Hor block increment" name="HorizontalBlockIncrement" type="int" category="Feature" order="10">
+		</Property>
+		<Property label="Ver unit iuncrement" name="VerticalUnitIncrement" type="int" category="Feature" order="10">
+		</Property>
+		<Property label="Ver block increment" name="VerticalBlockIncrement" type="int" category="Feature" order="10">
+		</Property>
+		<Property label="Layout" name="Layout" type="Layout" action="reAppendChildren" editorParam="disabled" category="Layout" order="-10">
+		</Property>
+	</Com>
+
+	<Com name="JSeparator" clazz="org.aswing.JSeparator" sup="Component">
+		<Property label="Getter scope" name="getter_scope" type="Scope" editorParam="none-enabled" category="Common" order="10">
+			<Value value="none"></Value>
+		</Property>
+		<Property label="Orientation" name="Orientation" type="Orientation" category="Feature" order="10">
+		</Property>
+	</Com>
+
+	<Com name="JProgressBar" clazz="org.aswing.JProgressBar" sup="Component">
+		<Property label="Orientation" name="Orientation" type="Orientation" category="Feature" order="10">
+		</Property>
+		<Property label="Indeterminate" name="Indeterminate" type="Boolean" category="Feature" order="10">
+		</Property>
+		<Property label="Label" name="String" type="String" category="Feature" order="10">
+		</Property>
+		<Property label="Value" name="Value" type="int" category="Feature" order="10">
+			<Value value="0"></Value>
+		</Property>
+		<Property label="Minimum" name="Minimum" type="int" category="Feature" order="10">
+			<Value value="0"></Value>
+		</Property>
+		<Property label="Maximum" name="Maximum" type="int" category="Feature" order="10">
+			<Value value="100"></Value>
+		</Property>
+	</Com>
+
+	<Com name="JList" clazz="org.aswing.JList" sup="Component">
+		<Property label="Data" name="ListData" type="Array" category="Feature" order="0">
+			<Value value="item1,item2,item3,item4,item5,itemABC,itemDEF,itemHIJKLMN,itemOPQ,itemRST,AnyOtherItem,addHere"></Value>
+		</Property>
+		<Property label="Selection mode" name="SelectionMode" type="IntEmu" editorParam="Single,Multiple" category="Feature" order="10">
+		</Property>
+		<Property label="Prefer cell width" name="PreferredCellWidthWhenNoCount" type="int" action="revalidate" category="Feature" order="10">
+		</Property>
+		<Property label="Visible cell width" name="VisibleCellWidth" type="int" action="revalidate" category="Feature" order="10">
+		</Property>
+		<Property label="Visible row count" name="VisibleRowCount" type="int" action="revalidate" category="Feature" order="10">
+		</Property>
+		<Property label="Selection fore" name="SelectionForeground" type="Color" action="repaint" category="Feature" order="10">
+		</Property>
+		<Property label="Selection back" name="SelectionBackground" type="Color" action="repaint" category="Feature" order="10">
+		</Property>
+		<Property label="Tracks width" name="TracksWidth" type="Boolean" action="revalidate" category="Feature" order="10">
+		</Property>
+		<Property label="Hor unit increment" name="HorizontalUnitIncrement" type="int" category="Feature" order="10">
+		</Property>
+		<Property label="Hor block increment" name="HorizontalBlockIncrement" type="int" category="Feature" order="10">
+		</Property>
+		<Property label="Ver unit iuncrement" name="VerticalUnitIncrement" type="int" category="Feature" order="10">
+		</Property>
+		<Property label="Ver block increment" name="VerticalBlockIncrement" type="int" category="Feature" order="10">
+		</Property>
+	</Com>
+	<Com name="JTree" clazz="org.aswing.JTree" sup="Component">
+		<Property label="Selection mode" name="SelectionMode" type="IntEmu" editorParam=",Single,Contiguous Multiple,,Multiple" category="Feature" order="10">
+		</Property>
+		<Property label="Editable" name="Editable" type="Boolean" category="Feature" order="10">
+		</Property>
+		<Property label="Root visible" name="RootVisible" type="Boolean" action="revalidate" category="Feature" order="10">
+		</Property>
+		<Property label="Visible row count" name="VisibleRowCount" type="int" action="revalidate" category="Feature" order="10">
+		</Property>
+		<Property label="Row height" name="RowHeight" type="int" action="revalidate" category="Feature" order="10">
+		</Property>
+		<Property label="Toggle clickCount" name="ToggleClickCount" type="int" category="Feature" order="10">
+		</Property>
+		<Property label="Scrolls on expand" name="ScrollsOnExpand" type="Boolean" category="Feature" order="10">
+		</Property>
+		<Property label="Expands selected paths" name="ExpandsSelectedPaths" type="Boolean" category="Feature" order="10">
+		</Property>
+		<Property label="Fixed cell width" name="FixedCellWidth" type="int" category="Feature" order="10">
+		</Property>
+		<Property label="Invokes stop cell editing" name="InvokesStopCellEditing" type="Boolean" category="Feature" order="10">
+		</Property>
+		<Property label="Selection fore" name="SelectionForeground" type="Color" action="repaint" category="Feature" order="10">
+		</Property>
+		<Property label="Selection back" name="SelectionBackground" type="Color" action="repaint" category="Feature" order="10">
+		</Property>
+		<Property label="Hor unit increment" name="HorizontalUnitIncrement" type="int" category="Feature" order="10">
+		</Property>
+		<Property label="Hor block increment" name="HorizontalBlockIncrement" type="int" category="Feature" order="10">
+		</Property>
+		<Property label="Ver unit iuncrement" name="VerticalUnitIncrement" type="int" category="Feature" order="10">
+		</Property>
+		<Property label="Ver block increment" name="VerticalBlockIncrement" type="int" category="Feature" order="10">
+		</Property>
+	</Com>
+	<Com name="JTable" clazz="org.aswing.JTable" sup="Component">
+		<Property label="Selection mode" name="SelectionMode" type="IntEmu" editorParam="Single,Multiple" category="Feature" order="10">
+		</Property>
+		<Property label="Auto resize mode" name="AutoResizeMode" type="IntEmu" editorParam="Auto off,Next column,Subsequent columns,Last column,All columns" category="Feature" order="10">
+		</Property>
+		<Property label="Row height" name="RowHeight" type="int" action="revalidate" category="Feature" order="10">
+		</Property>
+		<Property label="Row margin" name="RowMargin" type="int" action="revalidate" category="Feature" order="10">
+		</Property>
+		<Property label="Intercell spacing" name="IntercellSpacing" type="IntDimension" action="revalidate" category="Feature" order="10">
+		</Property>
+		<Property label="View port prefer size" name="PreferredScrollableViewportSize" type="IntDimension" action="revalidate" category="Feature" order="10">
+		</Property>
+		<Property label="Row selection allowed" name="RowSelectionAllowed" type="Boolean" category="Feature" order="10">
+		</Property>
+		<Property label="Column selection allowed" name="ColumnSelectionAllowed" type="Boolean" category="Feature" order="10">
+		</Property>
+		<Property label="Cell selection enabled" name="CellSelectionEnabled" type="Boolean" category="Feature" order="10">
+		</Property>
+		<Property label="Show hor grid" name="ShowHorizontalLines" type="Boolean" category="Feature" order="10">
+		</Property>
+		<Property label="Show ver grid" name="ShowVerticalLines" type="Boolean" category="Feature" order="10">
+		</Property>
+		<Property label="Show grids" name="ShowGrid" type="Boolean" category="Feature" order="10">
+		</Property>
+		<Property label="Selection fore" name="SelectionForeground" type="Color" action="repaint" category="Feature" order="10">
+		</Property>
+		<Property label="Selection back" name="SelectionBackground" type="Color" action="repaint" category="Feature" order="10">
+		</Property>
+		<Property label="Grid color" name="GridColor" type="Color" action="repaint" category="Feature" order="10">
+		</Property>
+		<Property label="Hor unit increment" name="HorizontalUnitIncrement" type="int" category="Feature" order="10">
+		</Property>
+		<Property label="Hor block increment" name="HorizontalBlockIncrement" type="int" category="Feature" order="10">
+		</Property>
+		<Property label="Ver unit iuncrement" name="VerticalUnitIncrement" type="int" category="Feature" order="10">
+		</Property>
+		<Property label="Ver block increment" name="VerticalBlockIncrement" type="int" category="Feature" order="10">
+		</Property>
+	</Com>
+	
+	<Com name="JToolBar" clazz="org.aswing.JToolBar" sup="Container">
+		<Property label="Getter scope" name="getter_scope" type="Scope" editorParam="none-enabled" category="Common" order="10">
+			<Value value="none"></Value>
+		</Property>
+		<Property label="Orientation" name="Orientation" type="Orientation" category="Feature" order="10">
+		</Property>
+		<Property label="Gap" name="Gap" type="int" category="Feature" order="10">
+		</Property>
+		<Property label="Layout" name="Layout" type="Layout" action="reAppendChildren" editorParam="disabled" category="Layout" order="-10">
+		</Property>
+	</Com>
+	
+	<Com name="JAccordion" clazz="org.aswing.JAccordion" sup="Container">
+		<Property label="Size" name="Size" type="Size" action="revalidate" category="Layout" order="10">
+			<Value value="300,300" ></Value>
+		</Property>
+		<Property label="Hor alig" name="HorizontalAlignment" type="Align" editorParam="hor-only" category="Feature" order="10">
+		</Property>
+		<Property label="Ver alig" name="VerticalAlignment" type="Align" editorParam="ver-only" category="Feature" order="10">
+		</Property>
+		<Property label="Hor text pos" name="HorizontalTextPosition" type="Align" editorParam="hor-only" category="Feature" order="10">
+		</Property>
+		<Property label="Ver text pos" name="VerticalTextPosition" type="Align" editorParam="ver-only" category="Feature" order="10">
+		</Property>
+		<Property label="Icon text gap" name="IconTextGap" type="int" category="Feature" order="10">
+		</Property>
+		<Property label="Layout" name="Layout" type="Layout" action="reAppendChildren" editorParam="disabled" category="Layout" order="-10">
+		</Property>
+	</Com>
+
+	<Com name="JTabbedPane" clazz="org.aswing.JTabbedPane" sup="JAccordion">
+		<Property label="Tab placement" name="TabPlacement" type="Align" category="Feature" order="10">
+		</Property>
+		<Property label="Layout" name="Layout" type="Layout" action="reAppendChildren" editorParam="disabled" category="Layout" order="-10">
+		</Property>
+	</Com>
+
+	<Com name="JClosableTabbedPane" clazz="org.aswing.JClosableTabbedPane" sup="JTabbedPane">
+	</Com>
+
+	<Com name="JSplitPane" clazz="org.aswing.JSplitPane" sup="Container">
+		<Property label="Orientation" name="Orientation" type="Orientation" category="Feature" order="10">
+		</Property>
+		<Property label="Continuous" name="ContinuousLayout" type="Boolean" category="Feature" order="10">
+		</Property>
+		<Property label="Resize weight[0-1]" name="ResizeWeight" type="Number" editorParam="0,1" category="Feature" order="10">
+		</Property>
+		<Property label="Divider location" name="DividerLocation" type="int" category="Feature" order="10">
+		</Property>
+		<Property label="Divider size" name="DividerSize" type="int" category="Feature" order="10">
+		</Property>
+		<Property label="One touch expand" name="OneTouchExpandable" type="Boolean" category="Feature" order="10">
+		</Property>
+		<Property label="Layout" name="Layout" type="Layout" action="reAppendChildren" editorParam="disabled" category="Layout" order="-10">
+		</Property>
+	</Com>
+
+	<Com name="JSpacer" clazz="org.aswing.JSpacer" sup="Component">
+		<Property label="Getter scope" name="getter_scope" type="Scope" editorParam="none-enabled" category="Common" order="10">
+			<Value value="none"></Value>
+		</Property>
+	</Com>
+
+	<Com name="JAttachPane" clazz="org.aswing.JAttachPane" sup="Container">
+		<Property label="Prefer size strategy" name="PrefferSizeStrategy" type="IntEmu" editorParam="Layout and Image,Image only,Layout only" category="Feature" order="10">
+		</Property>
+		<Property label="Scale mode" name="ScaleMode" type="IntEmu" editorParam="No scale,Proportional fit pane,Stretch fit pane,Proportional fit width,Proportional fit height" category="Feature" order="10">
+		</Property>
+		<Property label="Custom scale" name="CustomScale" type="int" category="Feature" order="10">
+		</Property>
+		<Property label="Hor alig" name="HorizontalAlignment" type="Align" action="revalidate" editorParam="hor-only" category="Feature" order="10">
+		</Property>
+		<Property label="Ver alig" name="VerticalAlignment" type="Align" action="revalidate" editorParam="ver-only" category="Feature" order="10">
+		</Property>
+		<Property label="Offset x" name="OffsetX" type="int" category="Feature" order="10">
+		</Property>
+		<Property label="Offset y" name="OffsetY" type="int" category="Feature" order="10">
+		</Property>
+		<Property label="Mask asset" name="MaskAsset" type="Boolean" category="Feature" order="10">
+		</Property>
+	</Com>
+
+	<Com name="JLoadPane" clazz="org.aswing.JLoadPane" sup="JAttachPane">
+	</Com>
+
+	<Com name="JColorSwatches" clazz="org.aswing.colorchooser.JColorSwatches" sup="Component">
+		<Property label="Alpha enabled" name="AlphaSectionVisible" type="Boolean" category="Feature" order="10">
+		</Property>
+		<Property label="Hex enabled" name="HexSectionVisible" type="Boolean" category="Feature" order="10">
+		</Property>
+		<Property label="Nocolor enabled" name="NoColorSectionVisible" type="Boolean" category="Feature" order="10">
+		</Property>
+	</Com>
+
+	<Com name="JColorMixer" clazz="org.aswing.colorchooser.JColorMixer" sup="JColorSwatches">
+	</Com>
+
+	<Com name="JColorChooser" clazz="org.aswing.JColorChooser" sup="JColorSwatches">
+	</Com>
+
+	<Com name="JMenuBar" clazz="org.aswing.JMenuBar" sup="Container">
+		<Property label="Layout" name="Layout" type="Layout" action="reAppendChildren" editorParam="disabled" category="Layout" order="-10">
+		</Property>
+	</Com>
+
+	<Com name="JMenu" clazz="org.aswing.JMenu" sup="Container">
+		<Property label="Label" name="Text" type="String" action="revalidate" category="Feature" order="10">
+			<Value value="label" ></Value>
+		</Property>
+		<Property label="Hor alig" name="HorizontalAlignment" type="Align" action="revalidate" editorParam="hor-only" category="Feature" order="10">
+		</Property>
+		<Property label="Ver alig" name="VerticalAlignment" type="Align" action="revalidate" editorParam="ver-only" category="Feature" order="10">
+		</Property>
+		<Property label="Hor text pos" name="HorizontalTextPosition" type="Align" action="revalidate" editorParam="hor-only" category="Feature" order="10">
+		</Property>
+		<Property label="Ver text pos" name="VerticalTextPosition" type="Align" action="revalidate" editorParam="ver-only" category="Feature" order="10">
+		</Property>
+		<Property label="Icon text gap" name="IconTextGap" type="int" action="revalidate" category="Feature" order="10">
+		</Property>
+		<Property label="Layout" name="Layout" type="Layout" action="reAppendChildren" editorParam="disabled" category="Layout" order="-10">
+		</Property>
+	</Com>
+	
+	<Com name="JMenuItem" clazz="org.aswing.JMenuItem" sup="JButton">
+	</Com>
+	
+	<Com name="JRadioButtonMenuItem" clazz="org.aswing.JRadioButtonMenuItem" sup="JToggleButton">
+	</Com>
+	
+	<Com name="JCheckBoxMenuItem" clazz="org.aswing.JCheckBoxMenuItem" sup="JToggleButton">
+	</Com>
+
+	<Com name="GridList" clazz="org.aswing.ext.GridList" sup="JViewport">
+		<Property label="Data" name="ListData" type="Array" category="Feature" order="0">
+			<Value value="item1,item2,item3,item4,item5,itemABC,itemDEF,itemHIJKLMN,itemOPQ,itemRST,AnyOtherItem,addHere"></Value>
+		</Property>
+		<Property label="Selection mode" name="SelectionMode" type="IntEmu" editorParam="Single,Multiple" category="Feature" order="10">
+		</Property>
+		<Property label="Columns" name="Columns" type="int" action="revalidate" category="Feature" order="10">
+		</Property>
+		<Property label="Rows" name="Rows" type="int" action="revalidate" category="Feature" order="10">
+		</Property>
+		<Property label="Tile Width" name="TileWidth" type="int" action="revalidate" category="Feature" order="10">
+		</Property>
+		<Property label="Tile Height" name="TileHeight" type="int" action="revalidate" category="Feature" order="10">
+		</Property>
+		<Property label="HGap" name="HGap" type="int" action="revalidate" category="Feature" order="10">
+		</Property>
+		<Property label="VGap" name="VGap" type="int" action="revalidate" category="Feature" order="10">
+		</Property>
+		<Property label="AutoScroll" name="AutoScroll" type="Boolean" category="Feature" order="10">
+		</Property>
+	</Com>
+	
+	<Com name="DateChooser" clazz="org.aswing.ext.DateChooser" sup="Component">
+		<Property label="Multiple Selection" name="AllowMultipleSelection" type="Boolean" category="Feature" order="10">
+		</Property>
+		<Property label="DayNames" name="DayNames" type="Array" category="Feature" order="10">
+			<Value value=" Su , Mo , Tu , We , Th , Fr , Sa "></Value>
+		</Property>
+		<Property label="MonthNames" name="MonthNames" type="Array" category="Feature" order="10">
+			<Value value="January,February,March,April,May,June,July,August,September,October,November,December"></Value>
+		</Property>
+	</Com>
+	
+</Components>
+
+</Definition>

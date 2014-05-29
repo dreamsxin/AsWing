@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actionScriptProperties version="3" mainApplicationPath="TranslucentLAF.as">
+  <compiler additionalCompilerArguments="" copyDependentFiles="false" generateAccessible="false" strict="true" warn="true" htmlGenerate="false" htmlPlayerVersionCheck="true" htmlPlayerVersion="9.0.28" htmlExpressInstall="true" htmlHistoryManagement="false" outputFolderPath="bin" sourceFolderPath="src" useApolloConfig="false" verifyDigests="true" enableModuleDebug="true">
+    <compilerSourcePath/>
+    <libraryPath defaultLinkType="1">
+      <libraryPathEntry kind="4" path=""/>
+      <libraryPathEntry kind="3" path="/AsWingA3/bin/AsWingA3.swc" useDefaultLinkType="false" linkType="2"/>
+      <libraryPathEntry kind="3" path="/SkinBuilderLAF/bin/SkinBuilderLAF.swc" useDefaultLinkType="false" linkType="1"/>
+    </libraryPath>
+    <sourceAttachmentPath/>
+  </compiler>
+  <applications>
+    <application path="TranslucentLAF.as"/>
+  </applications>
+  <modules/>
+  <buildCSSFiles/>
+</actionScriptProperties>

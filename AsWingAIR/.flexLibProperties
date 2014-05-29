@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flexLibProperties version="1">
+<includeClasses>
+<classEntry path="org.aswing.air.JHTMLLoader"/>
+<classEntry path="org.aswing.air.JNativeWindow"/>
+<classEntry path="org.aswing.air.JNativeFrame"/>
+</includeClasses>
+<includeResources/>
+<namespaceManifests/>
+</flexLibProperties>
