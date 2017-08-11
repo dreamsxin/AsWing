@@ -230,6 +230,7 @@ public class BasicStepperUI extends BaseComponentUI{
 	
 	private function __onFocusGained(e:AWEvent):void{
 		startEditingValue = stepper.getValue();
+		inputText.selectAll();
 	}
 	
 	private function __onFocusLost(e:AWEvent):void{

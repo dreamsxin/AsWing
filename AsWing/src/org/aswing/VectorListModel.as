@@ -62,7 +62,21 @@ public class VectorListModel extends AbstractListModel implements MutableListMod
 		_elements[index] = obj;
 		fireContentsChanged(this, index, index, [oldObj]);
 		return oldObj;
-	}	
+	}
+	
+	public function swap(i1:int, i2:int):Boolean{
+		var n:int = size();
+		if(i1 < 0 || i1 >= n || i2 < 0 || i2 >= n || i1 == i2){
+			return false;
+		}
+		var o1:* = _elements[i1];
+		var o2:* = _elements[i2];
+		_elements[i1] = o2;
+		_elements[i2] = o1;
+		fireContentsChanged(this, i1, i1, [o1]);
+		fireContentsChanged(this, i2, i2, [o2]);
+		return true;
+	}
 	
 	/**
 	 * Append all the elements of a array(arr) to the specified position of the 

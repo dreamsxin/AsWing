@@ -234,7 +234,7 @@ public class BasicComboBoxUI extends BaseComponentUI implements ComboBoxUI{
     	var popupPaneHeight:int = popupPane.getHeight();
     	var maxTime:int = 10;
     	var minTime:int = 3;
-    	var speed:int = 50;
+    	var speed:int = int(popupPaneHeight / 4);
     	if(popupPaneHeight < speed*minTime){
     		speed = Math.ceil(popupPaneHeight/minTime);
     	}else if(popupPaneHeight > speed*maxTime){
